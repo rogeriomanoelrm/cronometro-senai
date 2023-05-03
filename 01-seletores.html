@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        .fonte{
+            color: lightcoral;
+            font-weight: bold;
+        }
+
+        .center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Seletores do Jquery</h1>
+    <p id="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis optio consequuntur distinctio, corrupti quisquam, officiis ad iusto aut quaerat exercitationem ab consectetur obcaecati! Asperiores, aliquid. Omnis, nesciunt. Commodi, blanditiis aut!</p>
+    <div class="quadrado-vermelho"></div>
+
+
+
+
+
+
+    <script src="jquery-3.6.4.min.js"></script>
+    <script>
+
+document.getElementsByTagName("h1")
+
+        $('h1').html('Olá mundo');
+        $('.quadrado-vermelho').html('Rogério');
+        $('#descricao').attr('class', 'fonte center ');
+        $('h1').attr('class', 'center');
+        // $('.quadrado-vermelho').attr('class', 'center');
+
+
+        $('.quadrado-vermelho').css('background-color', 'red').css('class', 'center');
+
+
+    </script>
+</body>
+</html>

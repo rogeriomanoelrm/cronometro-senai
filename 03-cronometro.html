@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Foldit:wght@500&family=Roboto&display=swap');
+      </style>
+    <style>
+             *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Foldit', cursive;
+            font-size: 4rem;
+          
+        }
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#resetar{
+    background-color: black;
+    width: 200px;
+    color: aqua;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <main id="tempo">
+        <span id="minutos">00</span>
+        :
+        <span id="segundos">00</span>
+        <span  id="resetar" style="font-family: 'Times New Roman', Times, serif; font-size: 0.5rem;">Resetar</span>
+    </main>
+
+
+
+    <script src="jquery-3.6.4.min.js"></script>
+    <script>
+$(document).ready(
+    () => {
+        let tempo = 0;
+        let temporizador = setInterval(function(){
+
+            tempo = tempo + 1000;
+            let minutos, segundos;
+
+            minutos = Math.floor(tempo / 1000 / 60);
+
+            segundos = Math.floor((tempo / 100 / 10)%60);
+
+            $('#minutos').html(minutos);
+            $('#segundos').html(segundos);
+
+            
+
+        }, 1000);
+
+        $('#resetar').click(()=>{
+            tempo = 0;
+            clearInterval();
+        }
+        ) 
+    }
+);
+    </script>
+</body>
+</html>

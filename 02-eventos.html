@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        div{
+            width: 250px;
+            height: 250px;
+            border: 5px dashed #444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="azul"><button id="btn1">Cique aqui</button></div>
+    <div class="vermelho"><button id="btn2">Cique aqui</button></div>
+    <div id="laranja"><button id="btn3">Cique aqui</button></div>
+
+
+
+
+    <script src="jquery-3.6.4.min.js"></script>
+
+    <script>
+        $('#btn1').click(() => $('#azul').css('background-color', 'darkblue'));
+        $('#btn2').click(() => $('.vermelho').css('background-color', 'black'));
+        $('#btn3').click(() => $('#laranja').css('background-color', 'green'));
+
+    </script>
+
+</body>
+
+</html>
